@@ -22,7 +22,7 @@ New lab materials will be added here as they are released.
 | Lab | Title | Materials |
 | --- | --- | --- |
 | 0 | Simple OpenMP Experiment | [Open Lab 0](./lab0/README.md) |
-| 1 | Coming soon | Not posted yet |
+| 1 | OpenMP Monte Carlo Simulation | [Open Lab 1](./lab1/README.md) |
 | 2 | Coming soon | Not posted yet |
 | 3 | Coming soon | Not posted yet |
 | 4 | Coming soon | Not posted yet |
@@ -44,6 +44,12 @@ For each lab:
 Lab 0 is now available:
 
 - [Lab 0 Instructions and Starter Files](./lab0/README.md)
+
+## Lab 1
+
+Lab 1 is now available:
+
+- [Lab 1 Instructions and Starter Files](./lab1/README.md)
 
 ## Submission
 
