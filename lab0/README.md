@@ -1,8 +1,5 @@
 # Lab 0: Simple OpenMP Experiment
 
-Source assignment page:
-<https://web.engr.oregonstate.edu/~mjb/cs575/Projects/proj00.html>
-
 ## Introduction
 
 A great use for parallel programming is identical operations on large arrays of numbers.
