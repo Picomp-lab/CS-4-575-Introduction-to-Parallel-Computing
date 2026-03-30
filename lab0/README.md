@@ -1,8 +1,5 @@
 # Lab 0: Simple OpenMP Experiment
 
-This lab is based on the Oregon State CS 475/575 Project 0 assignment:
-<https://web.engr.oregonstate.edu/~mjb/cs575/Projects/proj00.html>
-
 ## Goal
 
 Measure the performance difference between running a simple array multiplication loop with:

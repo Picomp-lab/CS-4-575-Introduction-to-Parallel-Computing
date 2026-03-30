@@ -1,10 +1,10 @@
 # CS 4/575: Introduction to Parallel Computing
 
-This repository will host the student lab projects for **CS 4/575: Introduction to Parallel Computing**.
+This repository contains the lab projects for **CS 4/575: Introduction to Parallel Computing**.
 
-## Overview
+## Course Labs
 
-There are eight lab projects in total:
+There are eight labs in total:
 
 - Lab 0
 - Lab 1
@@ -15,43 +15,36 @@ There are eight lab projects in total:
 - Lab 6
 - Lab 7
 
-The first two projects will be uploaded next. This README can be updated as each lab is added.
+New lab materials will be added here as they are released.
 
-## Lab Index
+## Available Now
 
-| Lab | Title | Status |
+| Lab | Title | Materials |
 | --- | --- | --- |
-| 0 | Simple OpenMP Experiment | In progress |
-| 1 | Project files to be added | Pending upload |
-| 2 | TBA | Not uploaded |
-| 3 | TBA | Not uploaded |
-| 4 | TBA | Not uploaded |
-| 5 | TBA | Not uploaded |
-| 6 | TBA | Not uploaded |
-| 7 | TBA | Not uploaded |
+| 0 | Simple OpenMP Experiment | [Open Lab 0](./lab0/README.md) |
+| 1 | Coming soon | Not posted yet |
+| 2 | Coming soon | Not posted yet |
+| 3 | Coming soon | Not posted yet |
+| 4 | Coming soon | Not posted yet |
+| 5 | Coming soon | Not posted yet |
+| 6 | Coming soon | Not posted yet |
+| 7 | Coming soon | Not posted yet |
 
-## Suggested Repository Layout
+## How To Use This Repository
 
-As projects are added, a simple structure like this will keep the repository easy to navigate:
+For each lab:
 
-```text
-lab0/
-lab1/
-lab2/
-lab3/
-lab4/
-lab5/
-lab6/
-lab7/
-README.md
-```
+- Open the lab folder and read the lab-specific `README.md`
+- Download or clone the repository to your local machine or course environment
+- Build and run the starter code if starter files are provided
+- Complete the required analysis, code, and write-up for that lab
 
-## Notes
+## Lab 0
 
-- Add one top-level folder per lab project.
-- Include lab-specific instructions, source files, and any starter code inside that lab's folder.
-- Update the table above as each project becomes available.
+Lab 0 is now available:
 
-## Current Labs
+- [Lab 0 Instructions and Starter Files](./lab0/README.md)
 
-- [Lab 0 README](./lab0/README.md): Project 0 scaffold and build instructions
+## Submission
+
+Follow the submission instructions given in the individual lab handout or on the course site.
