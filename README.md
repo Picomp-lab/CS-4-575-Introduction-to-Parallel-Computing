@@ -21,7 +21,7 @@ The first two projects will be uploaded next. This README can be updated as each
 
 | Lab | Title | Status |
 | --- | --- | --- |
-| 0 | Project files to be added | Pending upload |
+| 0 | Simple OpenMP Experiment | In progress |
 | 1 | Project files to be added | Pending upload |
 | 2 | TBA | Not uploaded |
 | 3 | TBA | Not uploaded |
@@ -51,3 +51,7 @@ README.md
 - Add one top-level folder per lab project.
 - Include lab-specific instructions, source files, and any starter code inside that lab's folder.
 - Update the table above as each project becomes available.
+
+## Current Labs
+
+- [Lab 0 README](./lab0/README.md): Project 0 scaffold and build instructions
