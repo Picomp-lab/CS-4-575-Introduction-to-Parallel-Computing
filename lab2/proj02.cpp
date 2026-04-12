@@ -22,6 +22,7 @@ const int START_YEAR = 2025;
 const int END_YEAR = 2031;
 const int NUM_SECTIONS = 4;
 
+// Shared simulation state for the current month.
 int NowYear;
 int NowMonth;
 float NowPrecip;
@@ -32,6 +33,7 @@ int NowNumWolves;
 
 unsigned int seed = 0;
 
+// Custom reusable barrier state required by the assignment.
 omp_lock_t Lock;
 volatile int NumInThreadTeam;
 volatile int NumAtBarrier;
@@ -65,6 +67,7 @@ main()
 
 	UpdateEnvironment();
 
+	// CSV output makes it easy to graph the month-by-month results later.
 	printf("Month,Year,TempF,PrecipIn,GrainHeightIn,NumDeer,NumWolves\n");
 
 	omp_set_num_threads(NUM_SECTIONS);
@@ -93,6 +96,7 @@ Grain()
 {
 	while (NowYear < END_YEAR)
 	{
+		// Grain grows best near the ideal temperature and precipitation.
 		float tempFactor = expf(-SQR((NowTemp - MIDTEMP) / 10.0f));
 		float precipFactor = expf(-SQR((NowPrecip - MIDPRECIP) / 10.0f));
 
@@ -102,9 +106,12 @@ Grain()
 		if (nextHeight < 0.0f)
 			nextHeight = 0.0f;
 
+		// Phase 1: finish computing next values.
 		WaitBarrier();
+		// Phase 2: publish this agent's next value.
 		NowHeight = nextHeight;
 		WaitBarrier();
+		// Phase 3: wait for the watcher to print and advance time.
 		WaitBarrier();
 	}
 }
@@ -114,6 +121,7 @@ Deer()
 {
 	while (NowYear < END_YEAR)
 	{
+		// Deer move toward the carrying capacity set by the grain height.
 		int nextNumDeer = NowNumDeer;
 		int carryingCapacity = (int)NowHeight;
 
@@ -138,6 +146,7 @@ Wolves()
 {
 	while (NowYear < END_YEAR)
 	{
+		// Wolves increase when there is plenty of prey and decline otherwise.
 		int nextNumWolves = NowNumWolves;
 
 		if (NowNumDeer > 2 * NowNumWolves)
@@ -160,12 +169,14 @@ Watcher()
 {
 	while (NowYear < END_YEAR)
 	{
+		// Wait until the other agents have computed and assigned this month.
 		WaitBarrier();
 		WaitBarrier();
 
 		printf("%d,%d,%.2f,%.2f,%.2f,%d,%d\n",
 			NowMonth + 1, NowYear, NowTemp, NowPrecip, NowHeight, NowNumDeer, NowNumWolves);
 
+		// The watcher is the only thread that advances time and weather.
 		NowMonth++;
 		if (NowMonth >= 12)
 		{
@@ -183,6 +194,7 @@ Watcher()
 void
 UpdateEnvironment()
 {
+	// Seasonal temperature and precipitation follow sine/cosine waves with noise.
 	float ang = (30.0f * (float)NowMonth + 15.0f) * (PI / 180.0f);
 
 	float temp = AVG_TEMP - AMP_TEMP * cosf(ang);
@@ -210,6 +222,7 @@ SQR(float x)
 void
 InitBarrier(int n)
 {
+	// Register how many threads must arrive before the barrier releases.
 	NumInThreadTeam = n;
 	NumAtBarrier = 0;
 	NumGone = 0;
@@ -219,6 +232,7 @@ InitBarrier(int n)
 void
 WaitBarrier()
 {
+	// Count this thread's arrival and let the last thread release the group.
 	omp_set_lock(&Lock);
 	{
 		NumAtBarrier++;

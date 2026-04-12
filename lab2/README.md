@@ -1,12 +1,9 @@
 # Lab 2: Functional Decomposition
 
-Official assignment page:
-
-- https://web.engr.oregonstate.edu/~mjb/cs575/Projects/proj02.html
 
 ## Introduction
 
-This local handout is based on the official CS 475/575 Project 2 page above. The project uses OpenMP threads for simulation structure rather than raw throughput. You will build a month-by-month model of grain growth in which separate agents update the deer population, grain height, and one additional quantity of your own choosing.
+The project uses OpenMP threads for simulation structure rather than raw throughput. You will build a month-by-month model of grain growth in which separate agents update the deer population, grain height, and one additional quantity of your own choosing.
 
 ## Requirements
 
@@ -14,7 +11,7 @@ This local handout is based on the official CS 475/575 Project 2 page above. The
 
 | Variable | Meaning | Range |
 | --- | --- | --- |
-| `NowYear` | Current year | `2025` to `2030` |
+| `NowYear` | Current year | `2026` to `2031` |
 | `NowMonth` | Current month | `0` to `11` |
 | `NowPrecip` | Monthly precipitation | inches |
 | `NowTemp` | Monthly temperature | degrees Fahrenheit |
@@ -69,7 +66,7 @@ if (NowPrecip < 0.0f)
 
 ```c
 NowMonth = 0;
-NowYear = 2025;
+NowYear = 2026;
 NowNumDeer = 2;
 NowHeight = 5.0f;
 ```
