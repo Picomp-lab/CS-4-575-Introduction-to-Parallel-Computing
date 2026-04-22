@@ -4,9 +4,6 @@
 
 ### 100 Points
 
-### Due: May 7
-
-This page was last updated: March 28, 2025
 
 ### Caveat
 
