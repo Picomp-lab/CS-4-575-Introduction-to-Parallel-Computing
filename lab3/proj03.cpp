@@ -79,23 +79,15 @@ main( int argc, char *argv[ ] )
 		//fprintf( stderr, "%3d  %8.2f  %8.2f  %s\n", i, Cities[i].longitude, Cities[i].latitude, Cities[i].name.c_str() );
 	//}
 
-        omp_set_num_threads( NUMT );    // set the number of threads to use in parallelizing the for-loop:
+        omp_set_num_threads( NUMT );    // set the number of threads to use in parallelizing the for-loop:`
 
 	// seed the capitals:
 	// (this is just picking initial capital cities at uniform intervals)
-	if( NUMCAPITALS == 1 )
+	for( int k = 0; k < NUMCAPITALS; k++ )
 	{
-		Capitals[0].longitude = Cities[0].longitude;
-		Capitals[0].latitude  = Cities[0].latitude;
-	}
-	else
-	{
-		for( int k = 0; k < NUMCAPITALS; k++ )
-		{
-			int cityIndex = k * (NUMCITIES-1) / (NUMCAPITALS-1);
-			Capitals[k].longitude = Cities[cityIndex].longitude;
-			Capitals[k].latitude  = Cities[cityIndex].latitude;
-		}
+		int cityIndex = k * (NUMCITIES-1) / (NUMCAPITALS-1);
+		Capitals[k].longitude = Cities[cityIndex].longitude;
+		Capitals[k].latitude  = Cities[cityIndex].latitude;
 	}
 
 	double time0, time1;
@@ -111,7 +103,7 @@ main( int argc, char *argv[ ] )
 
 		time0 = omp_get_wtime( );
 
-#pragma omp parallel for default(none) shared(Cities, Capitals)
+        	// the #pragma goes here -- you figure out what it needs to look like:
 		for( int i = 0; i < NUMCITIES; i++ )
 		{
 			int capitalnumber = -1;
@@ -122,17 +114,15 @@ main( int argc, char *argv[ ] )
 				float dist = Distance( i, k );
 				if( dist < mindistance )
 				{
-					capitalnumber = k;
-					mindistance = dist;
-					Cities[i].capitalnumber = capitalnumber;
+					?????
+					?????
+					?????
 				}
 			}
 
-			Cities[i].mindistance = mindistance;
-
 			int k = Cities[i].capitalnumber;
 			// this is here for the same reason as the Trapezoid noteset uses it:
-#pragma omp critical
+			#pragma omp critical
 			{
 				Capitals[k].longsum += Cities[i].longitude;
 				Capitals[k].latsum  += Cities[i].latitude;
@@ -145,11 +135,8 @@ main( int argc, char *argv[ ] )
 		// get the average longitude and latitude for each capital:
 		for( int k = 0; k < NUMCAPITALS; k++ )
 		{
-			if( Capitals[k].numsum > 0 )
-			{
-				Capitals[k].longitude = Capitals[k].longsum / (float)Capitals[k].numsum;
-				Capitals[k].latitude  = Capitals[k].latsum / (float)Capitals[k].numsum;
-			}
+			Capitals[k].longitude = ?????
+			Capitals[k].latitude  = ?????
 		}
 	}
 
@@ -160,20 +147,7 @@ main( int argc, char *argv[ ] )
 	// this is the extra credit:
 	for( int k = 0; k < NUMCAPITALS; k++ )
 	{
-		int bestCity = 0;
-		float bestDistance = 1.e+37;
-		for( int i = 0; i < NUMCITIES; i++ )
-		{
-			float dx = Cities[i].longitude - Capitals[k].longitude;
-			float dy = Cities[i].latitude  - Capitals[k].latitude;
-			float dist = sqrtf( dx*dx + dy*dy );
-			if( dist < bestDistance )
-			{
-				bestDistance = dist;
-				bestCity = i;
-			}
-		}
-		Capitals[k].name = Cities[bestCity].name;
+		?????
 	}
 
 
@@ -183,10 +157,10 @@ main( int argc, char *argv[ ] )
 	{
 		for( int k = 0; k < NUMCAPITALS; k++ )
 		{
-			//fprintf( stderr, "\t%3d:  %8.2f , %8.2f\n", k, Capitals[k].longitude, Capitals[k].latitude );
+			fprintf( stderr, "\t%3d:  %8.2f , %8.2f\n", k, Capitals[k].longitude, Capitals[k].latitude );
 
 			//if you did the extra credit, use this fprintf instead:
-			fprintf( stderr, "\t%3d:  %8.2f , %8.2f , %s\n", k, Capitals[k].longitude, Capitals[k].latitude, Capitals[k].name.c_str() );
+			//fprintf( stderr, "\t%3d:  %8.2f , %8.2f , %s\n", k, Capitals[k].longitude, Capitals[k].latitude, Capitals[k].name.c_str() );
 		}
 	}
 #ifdef CSV
