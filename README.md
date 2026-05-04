@@ -26,7 +26,7 @@ New lab materials will be added here as they are released.
 | 2 | Functional Decomposition | [Open Lab 2](./lab2/README.md) |
 | 3 | K-means Parallel Challenge | [Open Lab 3](./lab3/README.md) |
 | 4 | Vectorized Array Multiplication and Multiplication/Reduction using SSE | [Open Lab 4](./lab4/README.md) |
-| 5 | Coming soon | Not posted yet |
+| 5 | CUDA: Monte Carlo Simulation | [Open Lab 5](./lab5/README.md) |
 | 6 | Coming soon | Not posted yet |
 | 7 | Coming soon | Not posted yet |
 
@@ -68,6 +68,12 @@ Lab 3 is now available:
 Lab 4 is now available:
 
 - [Lab 4 Instructions and Starter Files](./lab4/README.md)
+
+## Lab 5
+
+Lab 5 is now available:
+
+- [Lab 5 Instructions and Starter Files](./lab5/README.md)
 
 ## Submission
 
