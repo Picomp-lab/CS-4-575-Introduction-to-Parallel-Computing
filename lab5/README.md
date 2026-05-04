@@ -4,12 +4,6 @@
 
 ### 100 Points
 
-### Due: May 22, 2025
-
-Source page: [CS 475/575 Project #5](https://web.engr.oregonstate.edu/~mjb/cs575/Projects/proj05.html)
-
-This README follows the Spring Quarter 2025 Project 5 page, last updated on May 20, 2025.
-
 ## Notes
 
 - `flip` does not have GPU cards, so CUDA and OpenCL will compile there but will not run there.
@@ -63,7 +57,6 @@ Use the same projectile equations as Project 1.
 - Helper header: [helper_image.h](https://github.com/Picomp-lab/CS-4-575-Introduction-to-Parallel-Computing/blob/main/lab5/helper_image.h)
 - Helper header: [helper_string.h](https://github.com/Picomp-lab/CS-4-575-Introduction-to-Parallel-Computing/blob/main/lab5/helper_string.h)
 - Helper header: [helper_timer.h](https://github.com/Picomp-lab/CS-4-575-Introduction-to-Parallel-Computing/blob/main/lab5/helper_timer.h)
-
 ## Linux Workflow
 
 On `rabbit`, the project page gives this working script:
