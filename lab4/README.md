@@ -4,11 +4,8 @@
 
 ### 60 Points
 
-### Due: May 14
 
-Source page: [CS 475/575 Project #4](https://web.engr.oregonstate.edu/~mjb/cs575/Projects/proj04.html)
-
-This README follows the Spring Quarter 2025 project page for CS 475/575 Project #4.
+This README follows the Spring Quarter 2026 project page for CS 475/575 Project #4.
 
 ## Introduction
 
@@ -48,7 +45,7 @@ S = Psse / Pnon-sse = Tnon-sse / Tsse
 
 ## SSE SIMD Code
 
-- Starter file: [all04.cpp](/nfs/stak/users/dongwenq/hpc-share/CS-4-575-Introduction-to-Parallel-Computing/lab4/all04.cpp)
+- Starter file: [all04.cpp](https://github.com/Picomp-lab/CS-4-575-Introduction-to-Parallel-Computing/blob/main/lab4/all04.cpp)
 - The OpenMP library is linked only because the starter uses it for timing.
 - Because the code uses assembly, it is not portable. The course page specifically notes that it works on `flip` and `rabbit`, and that it does not work in Visual Studio.
 - You may run tests one at a time or script them by setting the array size with a `#define` from outside the program.
