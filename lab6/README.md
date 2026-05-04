@@ -2,8 +2,6 @@
 
 ## CS 475/575 -- Spring Quarter 2025
 
-## Project #7
-
 ### Fourier Analysis using MPI
 
 ### 120 Points
