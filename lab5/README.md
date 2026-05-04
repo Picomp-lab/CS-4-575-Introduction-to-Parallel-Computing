@@ -19,6 +19,8 @@ Monte Carlo simulation is used to determine the range of outcomes for a set of p
 
 A castle sits on top of a cliff. An amateur band of mercenaries is trying to destroy it with a cannon. The geometry would normally be straightforward, but these attackers are poor at estimating distances and poor at aiming, so all five inputs vary within fixed ranges. Your job is to determine the probability that the cannonball actually hits the castle.
 
+![Projectile scenario](./projectile.thumb.jpg)
+
 ## Requirements
 
 1. Use these parameter ranges:

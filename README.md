@@ -27,7 +27,7 @@ New lab materials will be added here as they are released.
 | 3 | K-means Parallel Challenge | [Open Lab 3](./lab3/README.md) |
 | 4 | Vectorized Array Multiplication and Multiplication/Reduction using SSE | [Open Lab 4](./lab4/README.md) |
 | 5 | CUDA: Monte Carlo Simulation | [Open Lab 5](./lab5/README.md) |
-| 6 | Coming soon | Not posted yet |
+| 6 | Fourier Analysis using MPI | [Open Lab 6](./lab6/README.md) |
 | 7 | Coming soon | Not posted yet |
 
 ## How To Use This Repository
@@ -74,6 +74,12 @@ Lab 4 is now available:
 Lab 5 is now available:
 
 - [Lab 5 Instructions and Starter Files](./lab5/README.md)
+
+## Lab 6
+
+Lab 6 is now available:
+
+- [Lab 6 Instructions and Starter Files](./lab6/README.md)
 
 ## Submission
 
