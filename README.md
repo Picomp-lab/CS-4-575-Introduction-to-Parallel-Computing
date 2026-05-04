@@ -25,7 +25,7 @@ New lab materials will be added here as they are released.
 | 1 | OpenMP Monte Carlo Simulation | [Open Lab 1](./lab1/README.md) |
 | 2 | Functional Decomposition | [Open Lab 2](./lab2/README.md) |
 | 3 | K-means Parallel Challenge | [Open Lab 3](./lab3/README.md) |
-| 4 | Coming soon | Not posted yet |
+| 4 | Vectorized Array Multiplication and Multiplication/Reduction using SSE | [Open Lab 4](./lab4/README.md) |
 | 5 | Coming soon | Not posted yet |
 | 6 | Coming soon | Not posted yet |
 | 7 | Coming soon | Not posted yet |
@@ -62,6 +62,12 @@ Lab 2 is now available:
 Lab 3 is now available:
 
 - [Lab 3 Instructions and Starter Files](./lab3/README.md)
+
+## Lab 4
+
+Lab 4 is now available:
+
+- [Lab 4 Instructions and Starter Files](./lab4/README.md)
 
 ## Submission
 
