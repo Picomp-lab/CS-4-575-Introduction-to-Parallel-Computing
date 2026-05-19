@@ -79,7 +79,7 @@ Your PDF should include:
 
 ## Skeleton Code
 
-The provided starter file is [proj07.cpp](./proj07.cpp).
+The provided starter file is [proj06.cpp](./proj06.cpp).
 
 ## Grading
 
