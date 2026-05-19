@@ -1,6 +1,6 @@
 # Lab 6
 
-## CS 475/575 -- Spring Quarter 2025
+## CS 475/575 -- Spring Quarter 2026
 
 ### Fourier Analysis using MPI
 
