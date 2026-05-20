@@ -80,8 +80,8 @@ On the DGX system, the page gives this working `sbatch` script:
 ```bash
 #!/bin/bash
 #SBATCH  -J  MonteCarlo
-#SBATCH  -A  cs475-575
-#SBATCH  -p  classgputest
+#SBATCH  -A  eecs
+#SBATCH  -p  dgx2
 #SBATCH  --gres=gpu:1
 #SBATCH  -o  montecarlo.out
 #SBATCH  -e  montecarlo.err
